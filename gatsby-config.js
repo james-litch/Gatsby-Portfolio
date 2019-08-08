@@ -3,7 +3,41 @@ module.exports = {
         title: `James Litchfield`,
         description: `Welcome to my portfolio.`,
         author: `@James Litchfield`,
-        
+        menuLinks: [
+            {
+                name: 'Home',
+                link: '/'
+            },
+            {
+                name: 'About',
+                link: '/about'
+            },
+            {
+                name: 'Projects',
+                link:'/projects'
+            }
+        ],
+
+        socialLinks: [
+            {
+                name: 'email',
+                link: 'mailto:james.litchfield99@gmail.com'
+            },
+            {
+                name: 'github',
+                link: '/https://github.com/james-litch'
+            },
+            {
+                name: 'twitter',
+                link:'https://twitter.com/litchy_99'
+            },
+            {
+                name: 'linkedIn',
+                link:'https://www.linkedin.com/in/james-litchfield-34b875154/'
+            }
+
+        ]
+
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -20,8 +54,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                // name: `gatsby-starter-default`,
-                // short_name: `starter`,
+                // name: `gatsby-portfolio`,
+                // short_name: `portfolio`,
                 // start_url: `/`,
                 // background_color: `#663399`,
                 // theme_color: `#663399`,

@@ -8,8 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import styled, { ThemeProvider} from "styled-components"
-import Navbar from './navbar'
+import styled, { ThemeProvider } from "styled-components"
+import Header from './Header'
 
 
 const theme = {
@@ -19,8 +19,10 @@ const theme = {
   primaryText: 'white',
   secondary: 'rgb(238,206,26)',
   secondaryText: 'rgb(238,206,26)',
-  
-  iconMixin: (size, color,breakpoint) => `
+  mobileMenuOpacity: '0.95',
+  mobileBreakpoint: '700px',
+
+  iconMixin: (size, color, breakpoint) => `
   color: ${color};
   width: ${size};
   height: ${size};
@@ -30,13 +32,17 @@ const theme = {
   }
   `,
 
-  hoverColorMixin: (color, time) =>`
+  easeOut: (time) => `
+  transition: all ease-in-out ${time}s;
+  `,
+
+  hoverColorMixin: (color, time) => `
   &:hover{
     color: ${color};
     transition: all ease-in-out ${time}s;
   }
   `,
-  
+
 }
 
 
@@ -48,6 +54,10 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          menuLinks{
+            name
+            link
+          }
          
         }
       }
@@ -56,16 +66,16 @@ const Layout = ({ children }) => {
 
   return (
 
-    
+
     <ThemeProvider theme={theme}>
 
       <div>
-        
-          <main>{children}</main>
-       
+        <Header menuLinks={data.site.siteMetadata.menuLinks}/>
+        <main>{children}</main>
+
       </div>
     </ThemeProvider>
-    
+
 
   )
 }

@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import homeImage from "../images/home-img.jpg"
@@ -39,10 +38,10 @@ const IndexPage = () => (
         <Divider />
 
         <HorizontalIcons>
-        <Link><MailIcon/></Link>
-        <Link><GithubIcon/></Link>
-        <Link><TwitterIcon/></Link>
-        <Link><LinkedinIcon/></Link>
+          <Link to="/"><MailIcon /></Link>
+          <Link to="/"><GithubIcon /></Link>
+          <Link to="/"><TwitterIcon /></Link>
+          <Link to="/"><LinkedinIcon /></Link>
         </HorizontalIcons>
 
       </Center>

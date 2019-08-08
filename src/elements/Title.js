@@ -10,13 +10,13 @@ margin: 0.5rem 0;
 const LargeTitle = styled(Title)`
 font-size: 6rem;
 
-@media  (max-width: 700px){
+@media (max-width: ${props => props.theme.mobileBreakpoint}){
     font-size: 4rem;
 }
 `;
 
 
-export  {
+export {
     Title,
     LargeTitle,
 };
