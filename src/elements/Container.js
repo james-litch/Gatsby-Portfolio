@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
 
-const Center = styled.div`
+const CenterXY = styled.div`
  
   /* margin: auto; */
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 5vh;
   text-align: center;
   display: flex;
@@ -18,5 +18,5 @@ const Center = styled.div`
 `;
 
 export {
-  Center,
+  CenterXY,
 };

@@ -15,8 +15,16 @@ font-size: 6rem;
 }
 `;
 
+const SmallTitle = styled(Title)`
+font-size: 5rem;
+@media (max-width: ${props => props.theme.mobileBreakpoint}){
+    font-size: 3rem;
+}
+`;
+
 
 export {
     Title,
     LargeTitle,
+    SmallTitle
 };

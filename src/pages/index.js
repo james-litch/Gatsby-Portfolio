@@ -11,7 +11,7 @@ import {
   LandingImage,
   LargeTitle,
   Accent,
-  Center,
+  CenterXY,
   Paragraph,
   Divider,
   HorizontalIcons,
@@ -27,7 +27,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <LandingImage img={homeImage}>
-      <Center>
+      <CenterXY>
 
         <LargeTitle>Hello <Accent>World</Accent></LargeTitle>
 
@@ -44,7 +44,7 @@ const IndexPage = () => (
           <Link to="/"><LinkedinIcon /></Link>
         </HorizontalIcons>
 
-      </Center>
+      </CenterXY>
 
     </LandingImage>
   </Layout>

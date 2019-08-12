@@ -1,9 +1,20 @@
 import LandingImage from './Image'
-import { Title, LargeTitle } from './Title'
+
 import Accent from './Accent'
-import { Center } from './Container'
+
 import Paragraph from './Paragraph'
+
 import Divider from './Divider'
+
+import { 
+    CenterXY
+ } from './Container'
+
+import { 
+    Title, 
+    LargeTitle, 
+    SmallTitle } from './Title'
+
 import {
     Nav,
     NavLink,
@@ -24,8 +35,9 @@ export {
     LandingImage,
     Title,
     LargeTitle,
+    SmallTitle,
     Accent,
-    Center,
+    CenterXY,
     Paragraph,
     Divider,
     HorizontalIcons,
