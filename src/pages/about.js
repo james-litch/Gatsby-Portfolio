@@ -5,27 +5,19 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import {
-  LandingImage,
-  LargeTitle,
+
   SmallTitle,
   Accent,
-  CenterXY,
-  Paragraph,
-  Divider,
-  HorizontalIcons,
-  MailIcon,
-  GithubIcon,
-  TwitterIcon,
-  LinkedinIcon,
+  CenterX,
 } from "../elements"
 
 const AboutPage = () => (
   <Layout>
 
     <SEO title="About" />
-    <CenterXY>
+    <CenterX>
       <SmallTitle>About <Accent>Me</Accent> </SmallTitle>
-    </CenterXY>
+    </CenterX>
 
   </Layout>
 )

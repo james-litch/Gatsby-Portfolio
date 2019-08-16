@@ -15,9 +15,11 @@ class Header extends React.Component {
 
         this.state = { isToggleOn: false };
 
-        // This binding is necessary to make `this` work in the callback
+        
         this.handleClick = this.handleClick.bind(this);
     }
+
+    
 
     handleClick() {
 
@@ -32,7 +34,7 @@ class Header extends React.Component {
 
         return (
             <Navbar>
-                <NavBrand>James Litchfield</NavBrand>
+                <NavBrand>{this.props.title}</NavBrand>
 
                 <Nav showMenu={this.state.isToggleOn} >
 

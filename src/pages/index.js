@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import homeImage from "../images/home-img.jpg"
@@ -14,7 +13,7 @@ import {
   CenterXY,
   Paragraph,
   Divider,
-  HorizontalIcons,
+  LandingPageIcons,
   MailIcon,
   GithubIcon,
   TwitterIcon,
@@ -27,7 +26,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <LandingImage img={homeImage}>
-      <CenterXY>
+      <CenterXY height="100vh">
 
         <LargeTitle>Hello <Accent>World</Accent></LargeTitle>
 
@@ -37,12 +36,12 @@ const IndexPage = () => (
 
         <Divider />
 
-        <HorizontalIcons>
-          <Link to="/"><MailIcon /></Link>
-          <Link to="/"><GithubIcon /></Link>
-          <Link to="/"><TwitterIcon /></Link>
-          <Link to="/"><LinkedinIcon /></Link>
-        </HorizontalIcons>
+        <LandingPageIcons width="400px" height="100px">
+          <a href="/" target="_blank"><MailIcon /></a>
+          <a href="/" target="_blank"><GithubIcon /></a>
+          <a href="/" target="_blank"><TwitterIcon /></a>
+          <a href="/" target="_blank"><LinkedinIcon /></a>
+        </LandingPageIcons>
 
       </CenterXY>
 

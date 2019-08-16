@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import styled, { ThemeProvider } from "styled-components"
+import  { ThemeProvider } from "styled-components"
 import Header from './Header'
 
 
@@ -70,7 +70,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme}>
 
       <div>
-        <Header menuLinks={data.site.siteMetadata.menuLinks}/>
+        <Header title = {data.site.siteMetadata.title} menuLinks={data.site.siteMetadata.menuLinks}/>
         <main>{children}</main>
 
       </div>
