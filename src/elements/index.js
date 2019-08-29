@@ -1,8 +1,11 @@
 import Accent from './Accent'
 
-import Paragraph from './Paragraph'
-
 import Divider from './Divider'
+
+import {
+    Paragraph,
+    SmallParagraph, 
+}from './Paragraph'
 
 import {
     Button,
@@ -18,6 +21,7 @@ import {
     CenterXY,
     CardLayout,
     CardWrapper,
+    HoverContainer,
 } from './Container'
 
 import {
@@ -40,7 +44,8 @@ import {
     MailIcon,
     GithubIcon,
     TwitterIcon,
-    LinkedinIcon
+    LinkedinIcon,
+    FileIcon,
 } from './Icons'
 
 import {
@@ -70,8 +75,10 @@ export {
     CenterXY,
     CardLayout,
     CardWrapper,
+    HoverContainer,
 
     Paragraph,
+    SmallParagraph,
 
     Divider,
 
@@ -82,6 +89,7 @@ export {
     GithubIcon,
     TwitterIcon,
     LinkedinIcon,
+    FileIcon,
 
     // Navigation.
     Nav,

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import BackgroundImage from 'gatsby-background-image'
 import {
     Accent
 } from "../elements"
@@ -22,8 +23,8 @@ linear-gradient(
     
     
     `;
-
-const HoverImage = styled.div`
+    
+    const HoverImage = styled(BackgroundImage)`
     height: ${props => props.height || "500px"};
     width:  ${props => props.width || "500px"};
     display: flex;
@@ -31,16 +32,10 @@ const HoverImage = styled.div`
     justify-content: space-around;
     align-content: space-around;
     text-align: center;
-    color: transparent;
-    background: ${props => `
+    color: transparent; 
     
-    url(${props.img}) no-repeat center center
-    `};
-    background-size: cover;
-
     ${Accent}{
         color : transparent;
-
     }
     
     &:hover{
@@ -50,17 +45,19 @@ const HoverImage = styled.div`
             ${props.theme.primaryOpacity}
             )
             `};
-
-        color: ${props => props.theme.primaryText};
-
-        ${Accent} {
-            color: ${props => props.theme.secondary};
+            background-color: ${props => props.theme.primary};
+            
+            color: ${props => props.theme.primaryText};
+            
+            ${Accent} {
+                color: ${props => props.theme.secondary};
+            }
         }
-        }
+        
         `;
-
-export {
-    LandingImage,
-    HoverImage,
-
-}
+        
+        export {
+            LandingImage,
+            HoverImage,
+            
+        }

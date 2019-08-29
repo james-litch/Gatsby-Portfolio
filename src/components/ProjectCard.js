@@ -1,18 +1,16 @@
 import React from 'react'
 import styled from "styled-components"
-
+import BackgroundImage from 'gatsby-background-image'
 
 import {
     Circle,
     HorizontalIcons,
-    HoverImage,
+    HoverContainer,
     Button,
     CardWrapper,
-    CenterXY,
     Accent,
 
 } from '../elements'
-
 
 const TitleBar = styled.div`
 display: grid;
@@ -21,6 +19,7 @@ height: 20px;
 grid-template-columns: 1fr 5fr;
 color: ${props => props.theme.primary};
 font-size: 0.9rem;
+align-content: center;
 
 background: linear-gradient(#ebebeb, #d5d5d5);
 border-top: 1px solid #f3f1f3;
@@ -30,7 +29,7 @@ padding: 0px 5px;
 
 `;
 
-const ProjectCard = props => (
+const ProjectCard = ({ title, description, languages, github, url, image }) => (
     <CardWrapper borderRadius="6px" width="300px" height="320px">
 
         <TitleBar>
@@ -41,26 +40,30 @@ const ProjectCard = props => (
                 <Circle radius="0.75rem" color="#00ca56" />
             </HorizontalIcons>
 
-            {props.name}
+            {title}
+
         </TitleBar>
 
-        <HoverImage img={props.img} height="250px" width="300px">
-            <p> <Accent>Languages : </Accent>{props.languages}</p>
-            <p><Accent>Description : </Accent>{props.description}</p>
+        <BackgroundImage fluid={image} >
+            <HoverContainer height="250px" width="300px">
+                <p> <Accent>Tools : </Accent>{languages}</p>
+                <p><Accent>Description : </Accent>{description}</p>
+            </HoverContainer>
 
-        </HoverImage>
+        </BackgroundImage>
+
 
 
 
         <HorizontalIcons width="300px" height="50px">
-            <a href={props.github} target="_blank">
+            <a href={github} target="_blank" rel="noopener noreferrer">
 
-                <Button activeLink={props.github} height="30px" width="120px">Github</Button>
+                <Button activeLink={github} height="30px" width="120px">Github</Button>
             </a>
 
-            <a href={props.url} target="_blank">
+            <a href={url} target="_blank" rel="noopener noreferrer">
 
-                <Button activeLink={props.url} height="30px" width="120px">Live url</Button>
+                <Button activeLink={url} height="30px" width="120px">Live url</Button>
             </a>
 
         </HorizontalIcons>

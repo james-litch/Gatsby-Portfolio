@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Github, Twitter, LinkedinIn } from 'styled-icons/fa-brands'
-import { Envelope } from 'styled-icons/fa-solid'
+import { Envelope, FileAlt } from 'styled-icons/fa-solid'
 
 
 const HorizontalIcons = styled.div`
@@ -11,7 +11,7 @@ justify-content: space-around;
 align-content: center;
 align-items: center;
 width: ${props => props.width || "400px"};
-height: ${props => props.height || "400px"};
+height: ${props => props.height || "auto"};
 
 
 `;
@@ -19,7 +19,7 @@ height: ${props => props.height || "400px"};
 const LandingPageIcons = styled(HorizontalIcons)`
 
     @media (max-width: 700px){
-        width: 200px;
+        width: 300px;
     }
 `;
 
@@ -46,6 +46,12 @@ ${props => props.theme.hoverColorMixin(`${props.theme.secondary}`, 0.5)}
 
 `;
 
+const FileIcon = styled(FileAlt)`
+${props => props.theme.iconMixin('4rem', 'white', '700px')}
+${props => props.theme.hoverColorMixin(`${props.theme.secondary}`, 0.5)}
+
+`;
+
 
 
 
@@ -56,4 +62,5 @@ export {
     GithubIcon,
     TwitterIcon,
     LinkedinIcon,
+    FileIcon,
 }

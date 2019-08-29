@@ -102,6 +102,7 @@ const NavBrand = styled(Link)`
 const Navbar = styled.header`
     position: fixed;
     top: 0;
+    z-index: 10;
     width: 100%;
     height: 60px;
     display: grid;
