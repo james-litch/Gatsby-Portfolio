@@ -29,7 +29,10 @@ const IndexPage = () => {
       github
       twitter
       linkedIn
-      resume
+      resume{
+        publicURL
+        name
+      }
     }
   }
   `);
@@ -54,7 +57,7 @@ const IndexPage = () => {
             <a href={links.github} target="_blank" rel="noopener noreferrer"><GithubIcon /></a>
             <a href={links.twitter} target="_blank" rel="noopener noreferrer"><TwitterIcon /></a>
             <a href={links.linkedIn} target="_blank" rel="noopener noreferrer"><LinkedinIcon /></a>
-            <a href={links.resume} target="_blank" rel="noopener noreferrer"><FileIcon /></a>
+            <a href={links.resume.publicURL} target="_blank" rel="noopener noreferrer"><FileIcon /></a>
 
 
           </LandingPageIcons>
