@@ -1,10 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import homeImage from "../images/home-img.jpg"
-
-
-
+import homeImage from "../data/images/home-img.jpg"
+import { useStaticQuery, graphql } from "gatsby";
 
 import {
   LandingImage,
@@ -18,35 +16,54 @@ import {
   GithubIcon,
   TwitterIcon,
   LinkedinIcon,
+  FileIcon,
 } from "../elements"
 
 
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <LandingImage img={homeImage}>
-      <CenterXY height="100vh">
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+  {
+    dataJson{
+      email
+      github
+      twitter
+      linkedIn
+      resume
+    }
+  }
+  `);
+  const links = data.dataJson;
 
-        <LargeTitle>Hello <Accent>World</Accent></LargeTitle>
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <LandingImage img={homeImage}>
+        <CenterXY height="100vh" width='100vw'>
 
-        <Paragraph>
-          I'm James a Computer Science student with a passion for web development.
-        </Paragraph>
+          <LargeTitle>Hello <Accent>World</Accent></LargeTitle>
 
-        <Divider />
+          <Paragraph>
+            I'm James a Computer Science student with a passion for web development.
+    </Paragraph>
 
-        <LandingPageIcons width="400px" height="100px">
-          <a href="/" target="_blank"><MailIcon /></a>
-          <a href="/" target="_blank"><GithubIcon /></a>
-          <a href="/" target="_blank"><TwitterIcon /></a>
-          <a href="/" target="_blank"><LinkedinIcon /></a>
-        </LandingPageIcons>
+          <Divider />
 
-      </CenterXY>
+          <LandingPageIcons width="500px" >
+            <a href={links.email}><MailIcon /></a>
+            <a href={links.github} target="_blank" rel="noopener noreferrer"><GithubIcon /></a>
+            <a href={links.twitter} target="_blank" rel="noopener noreferrer"><TwitterIcon /></a>
+            <a href={links.linkedIn} target="_blank" rel="noopener noreferrer"><LinkedinIcon /></a>
+            <a href={links.resume} target="_blank" rel="noopener noreferrer"><FileIcon /></a>
 
-    </LandingImage>
-  </Layout>
-)
+
+          </LandingPageIcons>
+
+        </CenterXY>
+
+      </LandingImage>
+    </Layout>
+  );
+}
 
 export default IndexPage
