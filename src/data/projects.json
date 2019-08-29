@@ -4,8 +4,8 @@
         "image": "./images/portfolio.png",
         "description": "A cool portfolio using gatsby blah blah blah.",
         "languages": "Gatsby / React / GraphQL",
-        "github": "https://github.com",
-        "url" : "https://github.com"
+        "github": "https://github.com/james-litch.github.io",
+        "url": "https://james-litch.github.io"
     },
     {
         "title": "Cart Pole",
@@ -13,7 +13,6 @@
         "description": "Training an AI agent to play cartpole.",
         "languages": "Python",
         "github": "https://github.com/james-litch/CartPole"
-        
     },
     {
         "title": "Timetable App (android)",
@@ -21,8 +20,5 @@
         "description": "A time table app, with integrated maps and attendance registering.",
         "languages": "Java / XML / MySQL / PHP ",
         "github": "https://github.com/james-litch/UoLTimetable"
-        
     }
-    
-
 ]
