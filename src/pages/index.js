@@ -47,7 +47,7 @@ const IndexPage = () => {
           <LargeTitle>Hello <Accent>World</Accent></LargeTitle>
 
           <Paragraph>
-            I'm James a Computer Science student with a passion for web development.
+            I'm James, a Computer Science student with a passion for web development.
     </Paragraph>
 
           <Divider />

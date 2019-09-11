@@ -24,7 +24,7 @@ const AboutPage = props => (
 
       <SmallParagraph>
         I'm James, a student currently studying Computer Science at Liverpool University.
-        I enjoy producing high-qulaity and efficiant applications that fuel engagement with.
+        I enjoy producing high-qulaity and efficiant applications that fuel engagement with users.
       </SmallParagraph>
 
       <Divider />
