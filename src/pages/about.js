@@ -1,6 +1,6 @@
-import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from 'react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 import {
 
@@ -12,18 +12,16 @@ import {
   Divider,
   CardLayout,
   CardWrapper,
-} from "../elements"
+} from '../elements';
 
-const AboutPage = props => (
+const AboutPage = (props) => (
   <Layout>
-
     <SEO title="About" />
     <CenterX>
-
       <SmallTitle>About <Accent>Me</Accent> </SmallTitle>
 
       <SmallParagraph>
-        I'm James, a student currently studying Computer Science at Liverpool University.
+        I&apos;m James, a Computer Science Graduate specialising in mobile and web development.
         I enjoy producing high-qulaity and efficient applications that fuel engagement with users.
       </SmallParagraph>
 
@@ -31,9 +29,7 @@ const AboutPage = props => (
 
       <SmallTitle>My <Accent>Tools</Accent> </SmallTitle>
 
-
       <CardLayout>
-
         <CardWrapper color="transparent" width="300px" height="350px" borderRadius="20px" padding="10px">
           <Paragraph>Languages</Paragraph>
           <Divider />
@@ -44,8 +40,6 @@ const AboutPage = props => (
           <SmallParagraph>R</SmallParagraph>
           <SmallParagraph>Java</SmallParagraph>
           <SmallParagraph>Flutter / Dart</SmallParagraph>
-
-
         </CardWrapper>
 
         <CardWrapper color="transparent" width="300px" height="350px" borderRadius="20px" padding="10px">
@@ -54,16 +48,11 @@ const AboutPage = props => (
           <SmallParagraph>Git / Github</SmallParagraph>
           <SmallParagraph>Gulp</SmallParagraph>
           <SmallParagraph>GraphQL</SmallParagraph>
-
         </CardWrapper>
 
-
-
       </CardLayout>
-
     </CenterX>
-
   </Layout>
-)
+);
 
-export default AboutPage
+export default AboutPage;

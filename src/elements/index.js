@@ -1,103 +1,104 @@
-import Accent from './Accent'
+import Accent from './Accent';
 
-import Divider from './Divider'
-
-import {
-    Paragraph,
-    SmallParagraph, 
-}from './Paragraph'
+import Divider from './Divider';
 
 import {
-    Button,
-} from "./Button"
+  Paragraph,
+  SmallParagraph,
+} from './Paragraph';
 
 import {
-    LandingImage,
-    HoverImage,
-} from './Image'
+  Button,
+} from './Button';
 
 import {
-    CenterX,
-    CenterXY,
-    CardLayout,
-    CardWrapper,
-    HoverContainer,
-} from './Container'
+  LandingImage,
+  HoverImage,
+} from './Image';
 
 import {
-    Title,
-    LargeTitle,
-    SmallTitle
-} from './Title'
+  CenterX,
+  CenterXY,
+  CardLayout,
+  CardWrapper,
+  HoverContainer,
+} from './Container';
 
 import {
-    Nav,
-    NavLink,
-    NavToggler,
-    NavBrand,
-    Navbar,
-} from './Navigation'
+  Title,
+  LargeTitle,
+  SmallTitle,
+} from './Title';
 
 import {
-    HorizontalIcons,
-    LandingPageIcons,
-    MailIcon,
-    GithubIcon,
-    TwitterIcon,
-    LinkedinIcon,
-    FileIcon,
-} from './Icons'
+  Nav,
+  NavLink,
+  NavToggler,
+  NavBrand,
+  Navbar,
+} from './Navigation';
 
 import {
-    Circle,
-   
-} from './Shape'
+  HorizontalIcons,
+  LandingPageIcons,
+  MailIcon,
+  GithubIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  FileIcon,
+} from './Icons';
+
+import {
+  Circle,
+
+} from './Shape';
 
 
 export {
 
-    // Buttons 
-    Button,
+  // Buttons
+  Button,
 
-    // Images
-    LandingImage,
-    HoverImage,
+  // Images
+  LandingImage,
+  HoverImage,
 
-    // Titles.
-    Title,
-    LargeTitle,
-    SmallTitle,
+  // Titles.
+  Title,
+  LargeTitle,
+  SmallTitle,
 
-    Accent,
+  Accent,
 
-    // Containers.
-    CenterX,
-    CenterXY,
-    CardLayout,
-    CardWrapper,
-    HoverContainer,
+  // Containers.
+  CenterX,
+  CenterXY,
+  CardLayout,
+  CardWrapper,
+  HoverContainer,
 
-    Paragraph,
-    SmallParagraph,
+  Paragraph,
+  SmallParagraph,
 
-    Divider,
+  Divider,
 
-    // Icons.
-    HorizontalIcons,
-    LandingPageIcons,
-    MailIcon,
-    GithubIcon,
-    TwitterIcon,
-    LinkedinIcon,
-    FileIcon,
+  // Icons.
+  HorizontalIcons,
+  LandingPageIcons,
+  MailIcon,
+  GithubIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  FileIcon,
 
-    // Navigation.
-    Nav,
-    NavLink,
-    NavToggler,
-    NavBrand,
-    Navbar,
+  // Navigation.
+  Nav,
+  NavLink,
+  NavToggler,
+  NavBrand,
+  Navbar,
 
-    // Shape
-    Circle,
+  // Shape
+  Circle,
 }
+;

@@ -1,8 +1,8 @@
-import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import homeImage from "../data/images/home-img.jpg"
-import { useStaticQuery, graphql } from "gatsby";
+import React from 'react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import homeImage from '../data/images/home-img.jpg';
+import {useStaticQuery, graphql} from 'gatsby';
 
 import {
   LandingImage,
@@ -17,25 +17,14 @@ import {
   TwitterIcon,
   LinkedinIcon,
   FileIcon,
-} from "../elements"
-
+} from '../elements';
 
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-  {
-    dataJson{
-      email
-      github
-      twitter
-      linkedIn
-      resume{
-        publicURL
-        name
-      }
-    }
-  }
+    { dataJson { email github twitter linkedIn resume{ publicURL name } } }
   `);
+
   const links = data.dataJson;
 
   return (
@@ -47,8 +36,8 @@ const IndexPage = () => {
           <LargeTitle>Hello <Accent>World</Accent></LargeTitle>
 
           <Paragraph>
-            I'm James, a Computer Science student with a passion for web development.
-    </Paragraph>
+            I&apos;m James, a Computer Science Graduate with a passion for mobile and web development.
+          </Paragraph>
 
           <Divider />
 
@@ -67,6 +56,6 @@ const IndexPage = () => {
       </LandingImage>
     </Layout>
   );
-}
+};
 
-export default IndexPage
+export default IndexPage;

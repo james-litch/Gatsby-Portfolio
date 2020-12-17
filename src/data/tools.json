@@ -1,0 +1,9 @@
+[
+    {"name": "HTML5 / CSS / SCSS", "comfortLevel": "100" },
+    {"name": "JavaScript / TypeScript / Node", "comfortLevel": "90"},
+    {"name": "Swift / SwiftUI", "comfortLevel": "80"},
+    {"name": "Dart / Flutter", "comfortLevel": "90"},
+    {"name": "React / Gatsby", "comfortLevel": "70"},
+    {"name": "Git / GitHub", "comfortLevel": "90"},
+    {"name": "C# / Xamarin", "comfortLevel": "60"}
+]

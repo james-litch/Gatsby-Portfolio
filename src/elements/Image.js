@@ -1,8 +1,8 @@
-import styled from "styled-components"
-import BackgroundImage from 'gatsby-background-image'
+import styled from 'styled-components';
+import BackgroundImage from 'gatsby-background-image';
 import {
-    Accent
-} from "../elements"
+  Accent,
+} from '../elements';
 
 const LandingImage = styled.div`
 height: 100vh;
@@ -12,7 +12,7 @@ width: 100vw;
 
 
 
-background: ${props => `
+background: ${(props) => `
 linear-gradient(
     ${props.theme.primaryOpacity},
     ${props.theme.primaryOpacity}
@@ -23,10 +23,10 @@ linear-gradient(
     
     
     `;
-    
-    const HoverImage = styled(BackgroundImage)`
-    height: ${props => props.height || "500px"};
-    width:  ${props => props.width || "500px"};
+
+const HoverImage = styled(BackgroundImage)`
+    height: ${(props) => props.height || '500px'};
+    width:  ${(props) => props.width || '500px'};
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -39,25 +39,26 @@ linear-gradient(
     }
     
     &:hover{
-        background: ${props => `
+        background: ${(props) => `
         linear-gradient(
             ${props.theme.primaryOpacity},
             ${props.theme.primaryOpacity}
             )
             `};
-            background-color: ${props => props.theme.primary};
+            background-color: ${(props) => props.theme.primary};
             
-            color: ${props => props.theme.primaryText};
+            color: ${(props) => props.theme.primaryText};
             
             ${Accent} {
-                color: ${props => props.theme.secondary};
+                color: ${(props) => props.theme.secondary};
             }
         }
         
         `;
-        
-        export {
-            LandingImage,
-            HoverImage,
-            
-        }
+
+export {
+  LandingImage,
+  HoverImage,
+
+}
+;

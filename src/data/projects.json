@@ -1,9 +1,31 @@
 [
     {
+        "title": "Hour Blocks: day planner (iOS, Mac)",
+        "image": "./images/hourblocks.png",
+        "description": "With over 100,000 downloads, and app of the day in over 150 courties, Hour Blocks is a useful iOS app to help organise your day.",
+        "languages": "Swift",
+        "url": "https://www.eledev.digital/work/hour-blocks"
+    },
+    {
+        "title": "Pro Wrestling Simulator (iOS, Mac)",
+        "image": "./images/pws.png",
+        "description": "A exciting new wrestling simulator, conveniently on all of your apple deveices.",
+        "languages": "Swift / TypeScript",
+        "url": "https://www.eledev.digital/work/pro-wrestling-simulator"
+    },
+    {
+        "title": "NELL Lecture Companion",
+        "image": "./images/nell.png",
+        "description": "A cross-platform lecture assistant.",
+        "languages": "Flutter / Dart / GraphQL / Node",
+        "url": "https://nell-assistant.herokuapp.com/graphql",
+        "github": "https://github.com/james-litch/nell_app"
+    },
+    {
         "title": "Portfolio",
         "image": "./images/portfolio.png",
         "description": "A cool portfolio using gatsby blah blah blah.",
-        "languages": "Gatsby / React / GraphQL",
+        "languages": "Gatsby / React / GraphQL / Node",
         "github": "https://github.com/james-litch/james-litch.github.io/tree/master-source",
         "url": "https://james-litch.github.io"
     },

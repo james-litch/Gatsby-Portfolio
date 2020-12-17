@@ -1,8 +1,8 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import  { ThemeProvider } from "styled-components"
-import Header from './Header'
+import React from 'react';
+import PropTypes from 'prop-types';
+import {useStaticQuery, graphql} from 'gatsby';
+import {ThemeProvider} from 'styled-components';
+import Header from './Header';
 
 const theme = {
 
@@ -35,12 +35,10 @@ const theme = {
   }
   `,
 
-}
+};
 
 
-
-
-const Layout = ({ children }) => {
+const Layout = ({children}) => {
   const data = useStaticQuery(graphql`
     query SiteQuery {
       site {
@@ -54,7 +52,7 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
 
@@ -66,11 +64,12 @@ const Layout = ({ children }) => {
 
       </div>
     </ThemeProvider>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
 export default Layout
+;

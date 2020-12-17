@@ -1,18 +1,19 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+/* eslint-disable react/jsx-key */
+import React from 'react';
+import {graphql, useStaticQuery} from 'gatsby';
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import ProjectCard from "../components/ProjectCard";
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import ProjectCard from '../components/ProjectCard';
 
 import {
   SmallTitle,
   Accent,
   CenterX,
   CardLayout,
-} from "../elements"
+} from '../elements';
 
-const ProjectsPage = () => {
+const PortfolioPage = () => {
   const data = useStaticQuery(graphql`
   {
     allProjectsJson{
@@ -27,7 +28,7 @@ const ProjectsPage = () => {
             childImageSharp{
               fluid{
                 ...GatsbyImageSharpFluid
-              }	
+              }
             }
           }
         }
@@ -39,14 +40,14 @@ const ProjectsPage = () => {
   const projects = data.allProjectsJson.edges;
   return (
     <Layout>
-      <SEO title="Projects"/>
+      <SEO title="Portfolio"/>
       <CenterX>
 
         <SmallTitle>My <Accent>Projects</Accent> </SmallTitle>
 
         <CardLayout>
 
-          {projects.map(({ node: project }) => {
+          {projects.map(({node: project}) => {
             const title = project.title;
             const description = project.description;
             const languages = project.languages;
@@ -63,10 +64,8 @@ const ProjectsPage = () => {
                 url={url}
                 image={image}
               />
-            )
-
+            );
           })}
-
 
 
         </CardLayout>
@@ -74,6 +73,7 @@ const ProjectsPage = () => {
       </CenterX>
     </Layout>
   );
-}
+};
 
-export default ProjectsPage
+export default PortfolioPage
+;
