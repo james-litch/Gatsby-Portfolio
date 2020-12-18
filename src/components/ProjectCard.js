@@ -20,7 +20,8 @@ grid-template-columns: 1fr 5fr;
 color: ${(props) => props.theme.primary};
 font-size: 0.9rem;
 align-content: center;
-
+text-overflow: ellipsis;
+overflow: hidden; 
 background: linear-gradient(#ebebeb, #d5d5d5);
 border-top: 1px solid #f3f1f3;
 border-bottom: 1px solid #b1aeb1;
