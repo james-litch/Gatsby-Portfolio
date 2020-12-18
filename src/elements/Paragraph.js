@@ -11,12 +11,22 @@ color: ${(props) => props.color || props.theme.color};
 
 const SmallParagraph = styled(Paragraph)`
 font-size: 1.5rem;
+background-color: transparent;
 @media (max-width: ${(props) => props.theme.mobileBreakpoint}){
     font-size: 1.2rem;
+}
+`;
+
+const ToolName = styled(Paragraph)`
+font-size: 1.2rem;
+text-align: left;
+@media (max-width: ${(props) => props.theme.mobileBreakpoint}){
+    font-size: 1rem;
 }
 `;
 
 export {
   Paragraph,
   SmallParagraph,
+  ToolName,
 };

@@ -21,10 +21,11 @@ const CardWrapper = styled.div`
 
 height: ${(props) => props.height || '50px'};
 width:  ${(props) => props.width || '50px'};
+min-width: 50%;
 padding:  ${(props) => props.padding || '0px'};
 background-color: ${(props) => props.color || 'white'};
 border-radius: ${(props) => props.borderRadius || '50px'};
-box-shadow: 0px 0px 20px black;
+box-shadow: 0px 0px 20px #2B2B2B;
 `;
 
 const CenterXY = styled(CenterX)`

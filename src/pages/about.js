@@ -1,58 +1,59 @@
+/* eslint-disable react/jsx-key */
+import {graphql, useStaticQuery} from 'gatsby';
 import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-
 import {
-
-  SmallTitle,
   Accent,
+  Bar,
   CenterX,
-  SmallParagraph,
-  Paragraph,
-  Divider,
-  CardLayout,
   CardWrapper,
+  CardLayout,
+  Divider,
+  SmallParagraph,
+  SmallTitle,
+  ToolName,
 } from '../elements';
 
-const AboutPage = (props) => (
-  <Layout>
-    <SEO title="About" />
-    <CenterX>
-      <SmallTitle>About <Accent>Me</Accent> </SmallTitle>
 
-      <SmallParagraph>
+const AboutPage = (props) => {
+  const data = useStaticQuery(graphql`
+  { allToolsJson { edges { node { name comfortLevel } } } } `);
+  const tools = data.allToolsJson.edges;
+
+  return (
+    <Layout>
+      <SEO title="About" />
+      <CenterX>
+        <SmallTitle>About <Accent>Me</Accent> </SmallTitle>
+
+        <SmallParagraph>
         I&apos;m James, a Computer Science Graduate specialising in mobile and web development.
         I enjoy producing high-qulaity and efficient applications that fuel engagement with users.
-      </SmallParagraph>
+        </SmallParagraph>
+        <Divider/>
 
-      <Divider />
+        <SmallTitle>My <Accent>Tools</Accent> </SmallTitle>
 
-      <SmallTitle>My <Accent>Tools</Accent> </SmallTitle>
+        <CardLayout>
 
-      <CardLayout>
-        <CardWrapper color="transparent" width="300px" height="350px" borderRadius="20px" padding="10px">
-          <Paragraph>Languages</Paragraph>
-          <Divider />
-          <SmallParagraph>HTML / CSS / Sass</SmallParagraph>
-          <SmallParagraph>JavaScript</SmallParagraph>
-          <SmallParagraph>React / Gatsby</SmallParagraph>
-          <SmallParagraph>Python</SmallParagraph>
-          <SmallParagraph>R</SmallParagraph>
-          <SmallParagraph>Java</SmallParagraph>
-          <SmallParagraph>Flutter / Dart</SmallParagraph>
-        </CardWrapper>
+          <CardWrapper color="transparent" width="auto" height="auto" borderRadius="20px" padding="20px">
+            {tools.map(({node: tool}) => {
+              const confidence = `${tool.comfortLevel}%`;
+              return (
+                <>
+                  <ToolName> {tool.name}</ToolName>
+                  <Bar width={confidence} height="5px"/>
+                </>
+              );
+            })}
+          </CardWrapper>
+        </CardLayout>
 
-        <CardWrapper color="transparent" width="300px" height="350px" borderRadius="20px" padding="10px">
-          <Paragraph>Tools</Paragraph>
-          <Divider />
-          <SmallParagraph>Git / Github</SmallParagraph>
-          <SmallParagraph>Gulp</SmallParagraph>
-          <SmallParagraph>GraphQL</SmallParagraph>
-        </CardWrapper>
 
-      </CardLayout>
-    </CenterX>
-  </Layout>
-);
+      </CenterX>
+    </Layout>
+  );
+};
 
 export default AboutPage;

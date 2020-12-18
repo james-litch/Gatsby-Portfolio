@@ -75,5 +75,4 @@ const PortfolioPage = () => {
   );
 };
 
-export default PortfolioPage
-;
+export default PortfolioPage;

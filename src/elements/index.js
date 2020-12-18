@@ -5,6 +5,7 @@ import Divider from './Divider';
 import {
   Paragraph,
   SmallParagraph,
+  ToolName,
 } from './Paragraph';
 
 import {
@@ -50,7 +51,7 @@ import {
 
 import {
   Circle,
-
+  Bar,
 } from './Shape';
 
 
@@ -79,6 +80,7 @@ export {
 
   Paragraph,
   SmallParagraph,
+  ToolName,
 
   Divider,
 
@@ -100,5 +102,6 @@ export {
 
   // Shape
   Circle,
+  Bar,
 }
 ;
