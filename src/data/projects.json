@@ -1,13 +1,13 @@
 [
     {
-        "title": "Hour Blocks: day planner (iOS, Mac)",
+        "title": "Hour Blocks: day planner",
         "image": "./images/hourblocks.png",
         "description": "With over 100,000 downloads, and app of the day in over 150 courties, Hour Blocks is a useful iOS app to help organise your day.",
         "languages": "Swift",
         "url": "https://www.eledev.digital/work/hour-blocks"
     },
     {
-        "title": "Pro Wrestling Simulator (iOS, Mac)",
+        "title": "Pro Wrestling Simulator",
         "image": "./images/pws.png",
         "description": "A exciting new wrestling simulator, conveniently on all of your apple deveices.",
         "languages": "Swift / TypeScript",
