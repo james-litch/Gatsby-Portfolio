@@ -21,11 +21,14 @@ const CardWrapper = styled.div`
 
 height: ${(props) => props.height || '50px'};
 width:  ${(props) => props.width || '50px'};
-min-width: 50%;
+min-width: 60%;
 padding:  ${(props) => props.padding || '0px'};
 background-color: ${(props) => props.color || 'white'};
 border-radius: ${(props) => props.borderRadius || '50px'};
 box-shadow: 0px 0px 20px #2B2B2B;
+@media (max-width: ${(props) => props.theme.mobileBreakpoint}){
+  min-width: 80%;
+}
 `;
 
 const CenterXY = styled(CenterX)`
